@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context = "http://www.springframework.org/schema/context"
+	xmlns:p = "http://www.springframework.org/schema/p"
+	xmlns:util = "http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/util
+	http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- standalonelist -->
+	<util:list list-class="java.util.LinkedList" id = "close">
+	
+		<value>Raj</value>
+		<value>Pankaj</value>
+		<value>Ashutosh</value>
+		
+		
+	
+	</util:list>
+	
+	<util:map map-class = "java.util.HashMap" id = "fees"> 
+	
+	 <entry key = 'python' value = "7000"/>
+	 <entry key = 'PPA' value = "7500"/>
+	
+	</util:map>
+	
+	<bean class="com.springcore.standalonecollection.Person" name = "personobj">
+	
+		<property name = "friends">
+
+			<ref bean = "close"/>
+	
+		</property>
+		
+		<property name = "feesstructure">
+
+			<ref bean = "fees"/>
+	
+		</property>
+		
+	
+	</bean>
+	
+	
+
+</beans>

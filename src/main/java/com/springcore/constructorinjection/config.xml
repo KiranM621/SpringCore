@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context = "http://www.springframework.org/schema/context"
+	xmlns:p = "http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean class = "com.springcore.constructorinjection.Company" name = "cmp">
+		<constructor-arg value = "Persistent" type="String"/>
+		<constructor-arg value = "1Billion" type = "String"/>
+		
+	</bean>
+
+	<bean class = "com.springcore.constructorinjection.Employee" name = "emp1">
+		
+		<constructor-arg value = "Kiran"/>
+		
+			<!-- type is used to resolve ambiguity -->
+			
+		<constructor-arg value = "11" type = "int"/>
+		<constructor-arg ref = "cmp"></constructor-arg>
+	
+	</bean>
+	
+	
+	
+	
+
+</beans>
