@@ -9,7 +9,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/springcore/autowire/annotation/config.xml");
 		Employee emp = (Employee)context.getBean("emp1");
-		System.out.println("Employee: "+emp);
+		System.out.println("Employe: "+emp);
 	}
 
 }
