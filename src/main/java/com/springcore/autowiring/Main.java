@@ -11,6 +11,9 @@ public class Main {
 		Employee emp = (Employee)context.getBean("emp1");
 		System.out.println("Employe Updated: "+emp);
 		System.out.println("Employe : "+emp);
+		System.out.println("Employe Updated: "+emp);		
+		System.out.println("Employe Updated: "+emp);
+
 
 	}
 
